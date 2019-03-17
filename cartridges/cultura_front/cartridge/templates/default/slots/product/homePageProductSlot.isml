@@ -1,0 +1,18 @@
+<isinclude template="/components/modules" />
+
+<div class="homepage-product-listing row">
+
+    <div class="card col-12 hp-product-content">
+        <div class="card-body">
+            <iscontentasset aid="home-product-tile-content" />
+        </div>
+    </div>
+
+    <isloop items="${slotcontent.content}" var="product" status="loopState">
+
+        <div class="col-6 col-sm-3">
+            <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.ID, 'pview', 'tile', 'ratings', true, 'swatches', true)}"/>
+        </div>
+
+    </isloop>
+</div>
