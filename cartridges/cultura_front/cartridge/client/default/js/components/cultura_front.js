@@ -6,30 +6,30 @@
 
 $(document).ready(function () {
 
-    // Show / Hide on hover
-    $(".top-menu").hover(function () {
-        $(".navbar-nav").fadeIn();
-    });
+    // Show root categories menu on hover
+    if($(".top-menu").length){
+        $(".top-menu").hover(function () {
+            $(".navbar-nav").fadeIn();
+        });
+    }
 
-    $(".dropdown-item").mouseout(function () {
-        $(".dropdown-item").show();
-    });
+    // Show subcategories on root category nav item hover
+    if($(".nav-item").length){
+        $(".nav-item").hover(function () {
+            $(".sub-menu-wrapper").show();
 
-    $(".nav-item").hover(function () {
-        $(".sub-menu-wrapper").show();
+            // Display category name as title on right panel
+            var categoryTitle = $(".sub-menu-category-title");
+            categoryTitle.html($(this).attr("data-category"));
+        });
+    }
 
-        // Display category name as title on right panel
-        var categoryTitle = $(".sub-menu-category-title");
-        categoryTitle.html($(this).attr("data-category"));
-    });
-
-    $(".sub-menu-wrapper").mouseleave(function () {
-        $(".sub-menu-wrapper").hide();
-    });
-
-    $(".menu-group").mouseleave(function () {
-        $(".navbar-nav").hide();
-        $(".sub-menu-wrapper").hide();
-    });
+    // Hide mega menu on mouseleave
+    if($(".menu-group").length){
+        $(".menu-group").mouseleave(function () {
+            $(".navbar-nav").hide();
+            $(".sub-menu-wrapper").hide();
+        });
+    }
 
 });
