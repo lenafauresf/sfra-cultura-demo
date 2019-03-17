@@ -34,7 +34,7 @@
             <isinclude url="${URLUtils.url('Page-Locale', 'mobile', true)}" />
         </ul>
         <div class="sub-menu-wrapper">
-            <div class="sub-menu-category-title">Hello</div>
+            <div class="sub-menu-category-title">Missing subcategories</div>
         </div>
     </div>
 </nav>

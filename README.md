@@ -1,4 +1,4 @@
-# Storefront Reference Architecture (SFRA)
+# Cultura Demo - Storefront Reference Architecture (SFRA)
 
 This is a repository for the Cultura Demo Front cartridge for Storefront Reference Architecture.
 
