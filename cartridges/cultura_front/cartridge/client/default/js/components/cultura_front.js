@@ -30,7 +30,7 @@ $(document).ready(function () {
     }
 
     // Hide mega menu on mouseleave
-    if(megaMenuWtapper.length){
+    if(megaMenuWrapper.length){
         megaMenuWrapper.mouseleave(function () {
             rootCategoriesWrapper.hide();
             subCategoriesWrapper.hide();
